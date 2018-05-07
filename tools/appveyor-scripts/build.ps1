@@ -57,7 +57,7 @@ If ($env:build_type -eq "android_cpp_tests") {
     Push-Location $env:APPVEYOR_BUILD_FOLDER\cocos_new_test\proj.win32\
 
     & mkdir .\build
-    Push-Location.\build
+    Push-Location .\build
 
     cmake ..
     if ($lastexitcode -ne 0) {throw}
