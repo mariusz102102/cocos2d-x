@@ -62,7 +62,7 @@ If ($env:build_type -eq "android_cpp_tests") {
     cmake ..
     if ($lastexitcode -ne 0) {throw}
 
-    cmake --build ..
+    cmake --build .
     if ($lastexitcode -ne 0) {throw}
 
     & 7z a release_win32.7z $env:APPVEYOR_BUILD_FOLDER\cocos_new_test\proj.win32\Release.win32\
