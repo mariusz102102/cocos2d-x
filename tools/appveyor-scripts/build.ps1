@@ -54,7 +54,7 @@ If ($env:build_type -eq "android_cpp_tests") {
     & $python -u tools\cocos2d-console\bin\cocos.py --agreement n new -l cpp -p my.pack.qqqq cocos_new_test
     if ($lastexitcode -ne 0) {throw}
 
-    Push-Location $env:APPVEYOR_BUILD_FOLDER\cocos_new_test\proj.win32\
+    Push-Location $env:APPVEYOR_BUILD_FOLDER\cocos_new_test\
 
     & mkdir .\build
     Push-Location .\build
